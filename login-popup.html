@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login-style.css">
+  <title>Login Page</title>
+</head>
+<body>
+
+  <div id="loginBox" class="login-box">
+    <div class="login-box-content">
+     
+      <div class="login-description">
+        <h2>AYUSH STARTUP</h2>
+        <p>Startup India Portal is a one of its kind online platform for all stakeholders of the startup ecosystem in India.</p>
+        <img src="logo.jpg" alt="Login Image">
+      </div>
+  
+      
+      <div class="login-form">
+        <h2>Welcome</h2>
+        <form action="/login" method="post">
+          <input type="text" id="username" name="username" placeholder="Email" required>
+          <br>
+          
+          <input type="text" id="password" name="password" placeholder="Password" required oninput="hidePassword()">
+          <br>
+          <p>Don't have an account? <a href="/register">Register Now</a></p>
+          <button onclick="login()">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      
+      alert("Login button clicked!");
+    }
+
+    function hidePassword() {
+      var passwordInput = document.getElementById("password");
+      passwordInput.value = passwordInput.value.replace(/./g, '#');
+    }
+  </script>
+
+</body>
+</html>
